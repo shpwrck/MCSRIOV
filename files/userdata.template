@@ -10,4 +10,4 @@ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--fla
 curl https://docs.projectcalico.org/manifests/calico.yaml --output $MANIFEST_DIRECTORY/calico.yaml --create-dirs
 
 # Install Multus
-curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/userdata.template/multus-daemonset.yml --output $MANIFEST_DIRECTORY/multus-daemonset.yml --create-dirs
+curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/multus-daemonset.yml --output $MANIFEST_DIRECTORY/multus-daemonset.yml --create-dirs
