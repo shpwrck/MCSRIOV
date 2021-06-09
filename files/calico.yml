@@ -3764,10 +3764,10 @@ spec:
         # Used to install CNI.
         - name: cni-bin-dir
           hostPath:
-            path: /var/lib/rancher/k3s/data/current/bin
+            path: /opt/cni/bin 
         - name: cni-net-dir
           hostPath:
-            path: /var/lib/rancher/k3s/agent/etc/cni/net.d 
+            path: /etc/cni/net.d 
         # Used to access CNI logs.
         - name: cni-log-dir
           hostPath:

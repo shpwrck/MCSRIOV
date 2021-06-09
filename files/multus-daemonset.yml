@@ -195,10 +195,10 @@ spec:
       volumes:
         - name: cni
           hostPath:
-            path: /var/lib/rancher/k3s/agent/etc/cni/net.d
+            path: /etc/cni/net.d
         - name: cnibin
           hostPath:
-            path: /var/lib/rancher/k3s/data/current/bin
+            path: /opt/cni/bin
         - name: multus-cfg
           configMap:
             name: multus-cni-config
