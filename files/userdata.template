@@ -11,3 +11,9 @@ curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/calico.yml -
 
 # Install Multus
 curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/multus-daemonset.yml --output $MANIFEST_DIRECTORY/multus-daemonset.yml --create-dirs
+
+# Install CNI Plugins
+wget -q0- https://github.com/containernetworking/plugins/releases/download/v0.9.1/cni-plugins-linux-amd64-v0.9.1.tgz | tar xzf - -C /opt/cni/bin
+
+# Install Multus Example
+curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/multus-example.yml --output $MANIFEST_DIRECTORY/multus-example.yaml --create-dirs
