@@ -41,7 +41,7 @@ data:
               "type": "k8s"
           },
           "kubernetes": {
-              "kubeconfig": "__KUBECONFIG_FILEPATH__"
+              "kubeconfig": "/var/lib/rancher/k3s/agent__KUBECONFIG_FILEPATH__"
           }
         },
         {
