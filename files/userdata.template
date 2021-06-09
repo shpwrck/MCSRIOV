@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 export MANIFEST_DIRECTORY=/var/lib/rancher/k3s/server/manifests
 
 # Install k3s
-curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--flannel-backend=none --cluster-cidr=192.168.0.0/16 --disable-network-policy --disable=traefik --kubelet-arg=cni-bin-dir=/var/lib/rancher/k3s/agent/etc/cni/net.d,cni-conf-dir=/var/lib/rancher/k3s/data/current/bin" sh -
+curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--flannel-backend=none --cluster-cidr=192.168.0.0/16 --disable-network-policy --disable=traefik --kubelet-arg=cni-bin-dir=/var/lib/rancher/k3s/agent/etc/cni/net.d --kubelet-arg=cni-conf-dir=/var/lib/rancher/k3s/data/current/bin" sh -
 
 # Install Calico
 curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/calico.yml --output $MANIFEST_DIRECTORY/calico.yaml --create-dirs
