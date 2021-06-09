@@ -3658,7 +3658,7 @@ spec:
               value: "autodetect"
             # Specify the correct interface.
             - name: IP_AUTODETECTION_METHOD
-              value: "interface=eno5"
+              value: "interface=ens5"
             # Enable IPIP
             - name: CALICO_IPV4POOL_IPIP
               value: "Always"
