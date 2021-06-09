@@ -31,7 +31,7 @@ variable "prefix" {
 variable "instance_type" {
   type        = string
   description = "Instance type used for all EC2 instances"
-  default     = "t3a.medium"
+  default     = "c3.2xlarge"
 }
 
 # Local variables used to reduce repetition

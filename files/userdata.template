@@ -15,5 +15,8 @@ curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/multus-daemo
 # Install CNI Plugins
 wget -qO- https://github.com/containernetworking/plugins/releases/download/v0.9.1/cni-plugins-linux-amd64-v0.9.1.tgz | tar xzf - -C /opt/cni/bin
 
+# Install SR-IOV
+curl https://raw.githubusercontent.com/k8snetworkplumbingwg/sriov-cni/master/images/k8s-v1.16/sriov-cni-daemonset.yaml --output $MANIFEST_DIRECTORY/sriov-cni-daemonset.yaml --create-dirs
+
 # Install Multus Example
 curl https://raw.githubusercontent.com/shpwrck/MCSRIOV/master/files/multus-example.yml --output $MANIFEST_DIRECTORY/multus-example.yaml --create-dirs
