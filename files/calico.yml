@@ -41,7 +41,7 @@ data:
               "type": "k8s"
           },
           "kubernetes": {
-              "kubeconfig": "/var/lib/rancher/k3s/agent__KUBECONFIG_FILEPATH__"
+              "kubeconfig": "__KUBECONFIG_FILEPATH__"
           }
         },
         {
@@ -3656,6 +3656,9 @@ spec:
             # Auto-detect the BGP IP address.
             - name: IP
               value: "autodetect"
+            # Specify the correct interface.
+            - name: IP_AUTODETECTION_METHOD
+              value: "interface=eno5"
             # Enable IPIP
             - name: CALICO_IPV4POOL_IPIP
               value: "Always"
